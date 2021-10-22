@@ -12,19 +12,20 @@ public class BukuTelepon {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
+        sc.nextLine();
 
         HashMap<String, String> bukuTelepon = new HashMap<String, String>();
 
         // Input the name and its phone number
         for (int i = 0; i < N; i++) {
-            String key = sc.next();
-            String value = sc.next();
+            String key = sc.nextLine();
+            String value = sc.nextLine();
             bukuTelepon.put(key, value);
         }
 
         // Query all N person
         for (int i = 0; i < N; i++) {
-            String query = sc.next();
+            String query = sc.nextLine();
             String number = bukuTelepon.get(query);
             if (number == null) {
                 System.out.println("Not found");
